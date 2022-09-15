@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carmarket</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/fontawesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="loader"></div>
+    <header class="header">
+        <ul class="nav-ul">
+            <li><a href="mainpage.html"><ion-icon name="car-sport-outline"></ion-icon></ion-icon></a></li>
+            <li><a href="index.html"><ion-icon name="information-circle-outline"></ion-icon></a></li>
+            <li><a href="support.html"><ion-icon name="call-outline"></ion-icon></a></li>
+            <div id="marker"></div>
+        </ul> 
+    </header>
+    <section>
+        <div class="support-container">
+            <div class="support-first-div">
+                <h1>Please select what kind of support do you need</h1>
+                <select name="role" id="dropdown" class="select" required>
+                    <option disabled selected value="Select an option">Select an option</option>
+                    <option value="bug">It's a bug on website</option>
+                    <option value="ddm">Description doesn't match product</option>
+                    <option value="NSFW">Content is NSFW</option>
+                    <option value="other">I have other question</option>
+                </select>
+                <h1>Enter your contact Email</h1>
+                <input type="email" name="name" id="email" placeholder="Enter your email" class="email-input" required>
+                <h1>Describe your problem</h1>
+                <textarea name="comment" id="comments" class="support-input-textarea" placeholder="Enter your problem here... " required></textarea>
+                <div class="second-support-div">
+                    <div class="second-support-div-text">
+                        <p>After sending ticket we will response in nearest 24 hour, If you couldn't get a response please check your
+                            spam channels. Otherwise contact us on tel: <a href="tel:225 341 234" class="telnumb">225 341 234</a>
+                        </p>
+                    </div>
+                    <div class="second-support-div-button">
+                        <a href="#">
+                            <button type="submit">Submit</button>
+                        </a>
+                    </div>
+                </div>
+                <h1 class="wer">Find us on map</h1>
+                <div class="support-map">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d223895.81561745418!2d42.66353782515804!3d42.256188830730665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x405c8ce1e04989d3%3A0xe3e703820483ef92!2z4YOY4YOb4YOU4YOg4YOU4YOX4YOY4YOhIOGDm-GDruGDkOGDoOGDlA!3m2!1d42.2597366!2d42.7070976!5e0!3m2!1ska!2sge!4v1659798689340!5m2!1ska!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-main-div">
+                <div class="footer-first-grid-div">
+                    <h1>CarMarket</h1>
+                </div>
+                <div class="footer-second-grid-div">
+                    <p>CarMarket made possible by it's own user's thanks for your support</p>
+                </div>
+                <div class="footer-third-grid-div">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-solid fa-at"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+                <div class="footer-fourth-grid-div">
+                    <a href="support.html">
+                        <button>Contact Support</button>
+                    </a>
+                </div>
+                <div class="footer-fifth-grid-div">
+                    Copyright ©2022, All right's served<strong>Made by GABRO</strong>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="support.js"></script>
+    <script src="animation.js"></script>
+    <script src="load.js"></script>
+</body>
+</html>

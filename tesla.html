@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carmarket</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/fontawesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="jQuery-Plugin-For-Magnifying-Glass-Effect-On-Images-Image-Magnifier/idd-zoom.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <header class="header">
+        <ul class="nav-ul">
+            <li><a href="mainpage.html"><ion-icon name="car-sport-outline"></ion-icon></ion-icon></a></li>
+            <li><a href="index.html"><ion-icon name="information-circle-outline"></ion-icon></a></li>
+            <li><a href="support.html"><ion-icon name="call-outline"></ion-icon></a></li>
+            <div id="marker"></div>
+        </ul> 
+    </header>
+    <section>
+        <div class="checkout-container">
+            <div class="check-out-elemnts">
+                <div id="idd-zoom" class="check-out-elemnt-first-div manles idd-zoom">
+                    <img id="main-image" src="img/tesla.solidd.png" alt="in-product-img" class="check-out-elemnts-main-img xzoom mnimg" draggable="false">
+                </div>
+                <div class="check-out-elemnt-second-div">
+                    <p id="DescriptionText" class="check-out-elemnt-second-div-text">Tesla 2021 Model 3 edition. Viloet color from salon 
+                        in best condition full comfort and best choice in Electric side.
+                    </p>
+                    <div class="check-out-elemnt-second-div-price-tag">
+                        <h1 class="check-out-elemnt-second-div-price-tag-element">41,000$</h1>
+                    </div>
+                </div>
+                <div class="check-out-elemnt-third-div">
+                    <div class="check-out-elemnt-third-div-altimiges altimiges">
+                        <div class="check-out-elemnt-third-div-altimige coetdaf altimg" onclick="changeImage(this)">
+                            <img src="img/tesla.solidd.png" alt="Product alt imige" id="altimg" class="coetdaf" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg filtimg" onclick="changeImage(this)">
+                            <img src="img/tesla-alt-1.png" alt="Product alt imige" id="second-alt-image" class="fiximg third-alt-image" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg" onclick="changeImage(this)">
+                            <img src="img/tesla-alt-2.png" alt="Product alt imige" id="third-alt-image" class="fiximg fourth-alt-image" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg" onclick="changeImage(this)">
+                            <img src="img/tesla-alt-3.png" alt="Product alt imige" id="fourth-alt-image" class="fiximg fifth-alt-image" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige coetdal altimg" onclick="changeImage(this)">
+                            <img src="img/tesla-alt-4.png" alt="Product alt imige" id="fifth-alt-image" class="coetdal" draggable="false">
+                        </div>
+                    </div>
+                </div>
+                <div class="check-out-elemnt-fourth-div">
+                    <a href="cart.html">
+                        <div class="counter-container">
+                            <span id="counter" class="amount">0</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </a>
+                    <button id="add-animation">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="checkout-container chcalt reveal">
+            <div class="hard-description">
+                <div class="hard-description-insider">
+                    <h1>Manufacturer </h1>
+                    <p id="Manufactor">Tesla</p>
+                    <h1>Year </h1>
+                    <p id="YearOfCar">2021</p>
+                    <h1>Mileage </h1>
+                    <p id="Milage">1000 KM</p>
+                    <h1>Motor </h1>
+                    <p id="Motor">1.5</p>
+                    <h1>Gearbox</h1>
+                    <p id="gear">Manual</p>
+                    <h1>Steering wheel</h1>
+                    <p id="Wheel">Left</p>
+                    <h1>Category</h1>
+                    <p id="Category">Electronic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="checkout-report">
+            <div class="report-box">
+                <p>If description didn't match please <strong>Report</strong> to Support</p>
+                <a href="support.html">
+                    <button>Report</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="checkout-footer">
+        <div class="footer-main-div">
+            <div class="footer-first-grid-div">
+                <h1>CarMarket</h1>
+            </div>
+            <div class="footer-second-grid-div">
+                <p>CarMarket made possible by it's own user's thanks for your support</p>
+            </div>
+            <div class="footer-third-grid-div">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-solid fa-at"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div class="footer-fourth-grid-div">
+                <a href="support.html">
+                    <button>Contact Support</button>
+                </a>
+            </div>
+            <div class="footer-fifth-grid-div">
+                Copyright ©2022, All right's served<strong>Made by GABRO</strong>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+    <script src="animation.js"></script>
+    <script src="load.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="jQuery-Plugin-For-Magnifying-Glass-Effect-On-Images-Image-Magnifier/idd-zoom.js"></script>
+    <script src="navbar.js"></script>
+    <script>
+        var mp = new magpic('#idd-zoom', {
+			magnifierSize:250,
+			fadeDuration: 400,
+			initialPosition: [250,300]
+        });
+    </script>
+</body>
+</html>

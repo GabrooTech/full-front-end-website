@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carmarket</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/fontawesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="loader"></div>
+    <header class="header">
+        <ul class="nav-ul">
+            <li><a href="mainpage.html"><ion-icon name="car-sport-outline"></ion-icon></ion-icon></a></li>
+            <li><a href="index.html"><ion-icon name="information-circle-outline"></ion-icon></a></li>
+            <li><a href="support.html"><ion-icon name="call-outline"></ion-icon></a></li>
+            <div id="marker"></div>
+        </ul> 
+    </header>
+    <section>
+        <div class="checkout-container">
+            <div class="check-out-elemnts">
+                <div class="check-out-elemnt-first-div manles">
+                    <img  alt="in-product-img" id="output" class="check-out-elemnts-main-img xzoom mnimg" draggable="false">
+                    <!-- <div class="lens"></div> -->
+                </div>
+                <div class="check-out-elemnt-second-div">
+                    <p class="check-out-elemnt-second-div-text" id="descriptionOutput"></p>
+                    <div class="check-out-elemnt-second-div-price-tag">
+                        <h1 class="check-out-elemnt-second-div-price-tag-element" id="price"></h1>
+                    </div>
+                </div>
+                <div class="check-out-elemnt-third-div">
+                    <div class="check-out-elemnt-third-div-altimiges altimiges">
+                        <div class="check-out-elemnt-third-div-altimige coetdaf altimg" onclick="changeImage(this)">
+                            <img alt="Product first-main alt imige"  id="altotp" class="coetdaf altmater" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg filtimg" onclick="changeImage(this)">
+                            <img alt="Product second alt imige" id="secalt" class="fiximg altmater" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg" onclick="changeImage(this)">
+                            <img alt="Product third alt imige" id="thialt" class="fiximg altmater" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige altimg" onclick="changeImage(this)">
+                            <img alt="Product fourth alt imige" id="foralt" class="fiximg altmater" draggable="false">
+                        </div>
+                        <div class="check-out-elemnt-third-div-altimige coetdal altimg" onclick="changeImage(this)">
+                            <img alt="Product fifth alt imige" id="fifalt" class="coetdal altmater" draggable="false">
+                        </div>
+                    </div>
+                </div>
+                <div class="check-out-elemnt-fourth-div">
+                    <a href="cart.html">
+                        <div class="counter-container">
+                            <span id="counter">1</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </a>
+                    <button id="add-animation">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="checkout-container chcalt">
+            <div class="hard-description">
+                <div class="hard-description-insider">
+                    <h1>Manufacturer </h1>
+                    <p id="manufactoroutput"></p>
+                    <h1>Year </h1>
+                    <p id="yearoutput"></p>
+                    <h1>Mileage </h1>
+                    <p id="Mileage"></p>
+                    <h1>Motor </h1>
+                    <p id="Motor"></p>
+                    <h1>Gearbox</h1>
+                    <p id="Gear"></p>
+                    <h1>Steering wheel</h1>
+                    <p id="Wheel"></p>
+                    <h1>Category</h1>
+                    <p id="Category"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="add-product-system">
+            <div class="aps-box">
+                <h1>Welcome to product managment!</h1>
+                <p>Here u will see different choices that you can make on product
+                    read everything step by step
+                </p>
+                <div class="element-selector">
+                    <div class="main-img-effector managment-box-tool">
+                        <p>this box is for main-img</p>
+                        <div class="grid-complector">
+                            <input class="img-input manager-imige-selector" type="file" accept="image/*" onchange="loadFile(event)">
+                            <button onclick="remove()" id="clear" class="img-clear-button">clear main-img</button>
+                        </div>
+                    </div>
+                    <div class="first-alt-img managment-box-tool">
+                        <p>this is for first alt imige it's must be same as main</p>
+                        <div class="grid-complector">
+                            <input type="file" class="manager-imige-selector" accept="image/*" onchange="loadFileSm(event)">
+                            <button onclick="removealtmn()" id="clear" class="img-clear-button">clear first alt-main-img</button>
+                        </div>
+                    </div>
+                    <div class="second-alt-img managment-box-tool">
+                        <p>this is for second alt-img</p>
+                        <div class="grid-complector">
+                            <input type="file" class="manager-imige-selector" accept="image/*" onchange="loadFileSa(event)">
+                            <button onclick="removealtsi()" id="clear" class="img-clear-button">clear second alt-img</button>
+                        </div>
+                    </div>
+                    <div class="third-alt-img managment-box-tool">
+                        <p>this is for third alt-img</p>
+                        <div class="grid-complector">
+                            <input type="file" class="manager-imige-selector" accept="image/*" onchange="loadFileta(event)">
+                            <button onclick="removealtti()" id="clear" class="img-clear-button">clear third alt-img</button>
+                        </div>
+                    </div>
+                    <div class="fourth-alt-img managment-box-tool">
+                        <p>this is for fourth alt-img</p>
+                        <div class="grid-complector">
+                            <input type="file" class="manager-imige-selector" accept="image/*" onchange="loadFilefora(event)">
+                            <button onclick="removealtfori()" id="clear" class="img-clear-button">clear fourth alt-img</button>
+                        </div>
+                    </div>
+                    <div class="fifth-alt-img managment-box-tool">
+                        <p>this is for fifth alt-img</p>
+                        <div class="grid-complector">
+                            <input type="file" class="manager-imige-selector" accept="image/*" onchange="loadFilefira(event)">
+                            <button onclick="removealtfifi()" id="clear" class="img-clear-button">clear fifth alt-img</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type full escription of car</p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="descText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submit" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removedesc()" id="clear" class="img-clear-button">clear description</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type Manufactors name of car</p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="manufactorText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitmanu" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removemanu()" id="clear" class="img-clear-button">clear Manufactors</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type year of car</p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="yearText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submityear" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removeyear()" id="clear" class="img-clear-button">clear year</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type Milage of car</p>
+                        <div class="grid-input"> 
+                            <input type="text" class="manager-input" id="milageText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitmilage" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removemilage()" id="clear" class="img-clear-button">clear milage</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type Price of car (please use "comma")</p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="priceText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitprice" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removeprice()" id="clear" class="img-clear-button">clear price</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please select Motor size of car</p>
+                        <div class="grid-input">
+                            <select name="role" class="manager-input mig" id="motorText">
+                                <option disabled selected value="Select an size">Select an size</option>
+                                <option value="2.0">2.0</option>
+                                <option value="3.0">3.0</option>
+                                <option value="4.0">4.0</option>
+                                <option value="5.0">5.0</option>
+                                <option value="6.0">6.0</option>
+                                <option value="7.0">7.0</option>
+                                <option value="8.0">8.0</option>
+                            </select>
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitmotor" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removemotor()" id="clear" class="img-clear-button">clear Motor size</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please select Gear type of car</p>
+                        <div class="grid-input">
+                            <select name="role" class="manager-input mig" id="gearText">
+                                <option disabled selected value="Select an size">Select gear type</option>
+                                <option value="Manual">Manual</option>
+                                <option value="Automatic">Automatic</option>
+                            </select>
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitgear" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removegear()" id="clear" class="img-clear-button">clear gear type</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please select wheel type of car</p>
+                        <div class="grid-input">
+                            <select name="role" class="manager-input mig" id="wheelText">
+                                <option disabled selected value="Select an size">Select steering wheel type</option>
+                                <option value="Left">Left</option>
+                                <option value="Right">Right</option>
+                            </select>
+                        </div>
+                        <div class="grid-complector-two">
+                            <!-- <button id="submitwheel" class="img-clear-button">Submit!</button> -->
+                            <button onclick="removewheel()" id="clear" class="img-clear-button">clear steering wheel type</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please select category</p>
+                        <div class="grid-input">
+                            <select name="role" class="manager-input mig" id="categoryText">
+                                <option disabled selected value="Select an size">Select car type</option>
+                                <option value="Micro">Micro</option>
+                                <option value="Hatchaback">Hatchaback</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="MPV">MPV</option>
+                                <option value="Converible">Converible</option>
+                                <option value="Wagon">Wagon</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Antique">Antique</option>
+                                <option value="SportsCar">Sports Car</option>
+                                <option value="Supercar">Super car</option>
+                                <option value="Musclecar">Muscle car</option>
+                                <option value="Limousine">Limousine</option>
+                                <option value="Hybridcar">Hybrid car</option>
+                                <option value="Electriccar">Electric car</option>
+                            </select>
+                        </div>
+                        <div class="grid-complector">
+                            <button id="submitcategory" class="img-clear-button">Submit!</button>
+                            <button onclick="removecategory()" id="clear" class="img-clear-button">clear category</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="offpage-product-container">
+            <div class="aps-box">
+                <h1>Second stage</h1>
+                <p>This is second stage of managment for product offpage</p>
+                <div class="element-selector">
+                    <div class="main-img-effector managment-box-tool">
+                        <p>this box is for image it must be cutten</p>
+                        <div class="grid-complector">
+                            <input id="CarImageFile" type="file" class="manager-imige-selector" accept="image/*">
+                            <button onclick="removeoffimg()" id="clear" class="img-clear-button">clear Main offpage image</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please retype Price of car (please use "comma")</p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="sepriceText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector">
+                            <button id="submitseprice" class="img-clear-button">Submit!</button>
+                            <button onclick="removeseprice()" id="clear" class="img-clear-button">clear price</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please type name of car </p>
+                        <div class="grid-input">
+                            <input type="text" class="manager-input" id="nameText" placeholder="Type Here">
+                        </div>
+                        <div class="grid-complector">
+                            <button id="submitname" class="img-clear-button">Submit!</button>
+                            <button onclick="removename()" id="clear" class="img-clear-button">clear Name</button>
+                        </div>
+                    </div>
+                    <div class="add-description-box managment-box-tool">
+                        <p> please select car type</p>
+                        <div class="grid-input">
+                            <select name="role" class="manager-input mig" id="datafilterText">
+                                <option disabled selected value="Select an car type">Select an car type</option>
+                                <option value="TESLA">TESLA</option>
+                                <option value="BMW">BMW</option>
+                                <option value="MERCEDES">MERCEDES</option>
+                                <option value="MAZDA">MAZDA</option>
+                                <option value="LEXUS">LEXUS</option>
+                                <option value="NISSAN">NISSAN</option>
+                            </select>
+                        </div>
+                        <div class="grid-complector">
+                            <button id="submitdatafilter" class="img-clear-button">Submit!</button>
+                            <button onclick="removedatafilter()" id="clear" class="img-clear-button">clear car type</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-face">
+                    <div id="CarBox" class="card first-color card-fix" id="datafilter" data-filter=" ">
+                        <div class="img-box">
+                            <img id="mainCut" src="" alt="select main image first" draggable="false" class="product-img">
+                        </div>
+                        <div class="content-box">
+                            <h1 id="nameoutput"></h1>
+                            <h2 id="seprice"></h2>
+                            <div class="car-colors">
+                                <h2>Colors:</h2>
+                                <span class="color-1"></span>
+                                <span class="color-2"></span>
+                                <span class="color-3"></span>
+                            </div>
+                            <a href="checkout.html">Check out</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="aeb" class="addproduct-ending-button">DONE!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="checkout-report">
+            <div class="report-box">
+                <p>If description didn't match please <strong>Report</strong> to Support</p>
+                <a href="support.html">
+                    <button>Report</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <canvas id="preview" style="display: none;"></canvas>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="localstorage.js"></script>
+    <script src="support.js"></script>
+    <script src="load.js"></script>
+</body>
+</html>

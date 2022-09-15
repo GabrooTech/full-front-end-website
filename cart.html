@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carmarket</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/fontawesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body id="body">
+    <div class="loader"></div>
+    <header class="header">
+        <ul class="nav-ul">
+            <li><a href="mainpage.html"><ion-icon name="car-sport-outline"></ion-icon></ion-icon></a></li>
+            <li><a href="index.html"><ion-icon name="information-circle-outline"></ion-icon></a></li>
+            <li><a href="support.html"><ion-icon name="call-outline"></ion-icon></a></li>
+            <div id="marker"></div>
+        </ul> 
+    </header>
+    <section id="cart-section">
+        <div class="cart-container" id="cart-container">
+            <div class="cart-list">
+                <h1>Car</h1>
+                <h1>Name</h1>
+                <h1>Price</h1>
+                <h1>Quantity</h1>
+                <h1>total</h1>
+            </div>
+
+            <div id="CartItems"></div>
+            
+
+            <div class="cart-total">
+                <h2>Cart total</h2>
+                <h2 id="TotalCost">25,000$</h2>
+            </div>
+            <div class="check-out-button">
+                <button id="cho">Check out</button>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script src="load.js"></script>
+</body>
+</html>

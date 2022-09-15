@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Carmarket</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.2-web/css/fontawesome.min.css">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="loader"></div>
+    <header class="header">
+        <ul class="nav-ul">
+            <li><a href="mainpage.html"><ion-icon name="car-sport-outline"></ion-icon></ion-icon></a></li>
+            <li><a href="index.html"><ion-icon name="information-circle-outline"></ion-icon></a></li>
+            <li><a href="support.html"><ion-icon name="call-outline"></ion-icon></a></li>
+            <div id="marker"></div>
+        </ul> 
+    </header>
+    <aside class="sidebar" id="sbd">
+        <i class="fa-solid fa-bars" id="btn"></i>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">Tesla</span>
+                </a>
+                <span class="tooltip">Tesla</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">BMW</span>
+                </a>
+                <span class="tooltip">BMW</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">Mercedes</span>
+                </a>
+                <span class="tooltip">Mercedes</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">Mazda</span>
+                </a>
+                <span class="tooltip">Mazda</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">Lexus</span>
+                </a>
+                <span class="tooltip">Lexus</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">Nissan</span>
+                </a>
+                <span class="tooltip">Nissan</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-circle"></i>
+                    <span class="Links_name">ALL</span>
+                </a>
+                <span class="tooltip">ALL</span>
+            </li>
+        </ul>
+        <div class="speeder" id="spdr"></div>
+    </aside>
+    <section class="search">
+        <div class="search-box" id="schbox">
+            <input class="search-txt" type="text" name="" placeholder="Type to search" id="search-input" onkeyup="search()">
+            <a href="#" class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+    </section>
+    <section class="section-cards" id="product-list">
+        <div class="cards-container cardcont">
+            <div class="cards" id="ProductList">
+                
+                <!-- <div class="card first-color" data-filter="BMW">
+                    <div class="img-box">
+                        <img src="img/bmw.png" alt="image can't load" draggable="false" class="product-img">
+                    </div>
+                    <div class="content-box">
+                        <h1>G20</h1>
+                        <h2>price: 12,000$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="checkout.html">Check out</a>
+                    </div>
+                </div>
+                <div class="card second-color" data-filter="LEXUS">
+                    <div class="img-box">
+                        <img src="img/lexus.png" alt="image can't load" draggable="false" class="product-img">
+                    </div>
+                    <div class="content-box">
+                        <h1>IS 35O F</h1>
+                        <h2>price: 18,000$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="checkout.html">Check out</a>
+                    </div>
+                </div> -->
+                <!-- <div class="card third-color" data-filter="MAZDA">
+                    <div class="img-box">
+                        <img src="img/mazda.png" alt="image can't load" draggable="false" class="product-img">
+                    </div>
+                    <div class="content-box">
+                        <h1>Carbon</h1>
+                        <h2>price: 28,045$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="mazda.html">Check out</a>
+                    </div>
+                </div>
+                <div class="card fourth-color" data-filter="MERCEDES">
+                    <div class="img-box">
+                        <img src="img/mercdez.png" alt="image can't load" draggable="false" class="product-img">
+                    </div>
+                    <div class="content-box">
+                        <h1>S-Class</h1>
+                        <h2>price: 110,850$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="mercedez.html">Check out</a>
+                    </div>
+                </div>
+                 <div class="card fifth-color" data-filter="NISSAN">
+                    <div class="img-box">
+                        <img src="img/nissan.png" alt="image can't load" draggable="false" class="product-img nissan-img">
+                    </div>
+                    <div class="content-box">
+                        <h1>Ariya</h1>
+                        <h2>price: 47,125$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="nissan.html">Check out</a>
+                    </div>
+                </div>
+                <div class="card sixth-color" data-filter="TESLA">
+                    <div class="img-box">
+                        <img src="img/tesla.png" alt="image can't load" draggable="false" class="product-img tesla-img">
+                    </div>
+                    <div class="content-box Tesla">
+                        <h1>2021 model 3</h1>
+                        <h2>price: 41,000$</h2>
+                        <div class="car-colors">
+                            <h2>Colors:</h2>
+                            <span class="color-1"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                        </div>
+                        <a href="tesla.html">Check out</a>
+                    </div>
+                </div> -->
+            </div>
+            
+        </div>
+    </section>
+    <section>
+        <div class="paginator">
+            <ul id="pgul">
+
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-main-div">
+            <div class="footer-first-grid-div">
+                <h1>CarMarket</h1>
+            </div>
+            <div class="footer-second-grid-div">
+                <p>CarMarket made possible by it's own user's thanks for your support</p>
+            </div>
+            <div class="footer-third-grid-div">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-solid fa-at"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div class="footer-fourth-grid-div">
+                <a href="support.html" id="add-product">
+                    <button>Contact Support</button>
+                </a>
+            </div>
+            <div class="footer-fifth-grid-div">
+                Copyright ©2022, All right's served<strong>Made by GABRO</strong>
+            </div>
+        </div>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+    <script src="index.js"></script>
+    <script src="animation.js"></script>
+    <script src="load.js"></script>
+    <script src="localstorageincrease.js"></script>
+    <script src="sidebarfix.js"></script>
+    <script src="paginator.js"></script>
+</html>
+</body>
+
+
+
